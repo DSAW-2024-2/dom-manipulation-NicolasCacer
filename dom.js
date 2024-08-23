@@ -1,6 +1,7 @@
 const rightButton = document.getElementById('right-button');
 const leftButton = document.getElementById('left-button');
 const portrait = document.getElementById('portrait');
+
 const images = [
   'assets/image_1.jpg',
   'assets/image_2.jpeg',
