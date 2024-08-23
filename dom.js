@@ -12,7 +12,7 @@ let displayImage = 0;
 rightButton.addEventListener('click', event => {
   if (displayImage < images.length-1){
     displayImage++;
-    portrait.src = images[displayImage]
+    portrait.src = images[displayImage];
   } 
 });
 
