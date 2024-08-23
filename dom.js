@@ -13,21 +13,12 @@ rightButton.addEventListener('click', event => {
   if (displayImage < images.length-1){
     displayImage++;
     portrait.src = images[displayImage]
-    console.log(displayImage)
-  }
-  else {
-    console.log(displayImage)
-  }
-  
+  } 
 });
 
 leftButton.addEventListener('click', event => {
   if (displayImage > 0){
     displayImage--
     portrait.src = images[displayImage]
-    console.log(displayImage)
-  }
-  else {
-    console.log(displayImage)
   }
 });
