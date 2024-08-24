@@ -45,3 +45,16 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    body {
+        background-color: aqua;
+    }
+}
+@media (max-width: 320px) {
+    body{
+        background-color: red;
+    }
+}
+    
+
+
