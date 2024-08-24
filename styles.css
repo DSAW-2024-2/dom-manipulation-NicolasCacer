@@ -1,4 +1,7 @@
 body {
+    max-width: 2560px;
+    max-height: 1031px;
+    min-height: 768px;
     margin: 0px;
     padding: 0px;
     height: 100vh;
@@ -40,6 +43,7 @@ body {
 @media (max-width:1024px) {
     body {
         max-height: 720px;
+        min-height: 768px;
         #portrait {
             height: 75%;
             width: 80%;
@@ -53,6 +57,7 @@ body {
 @media (max-width: 768px) {
     body{
         max-height: 1024px;
+        min-height: 1000px;
         display: flex;
         flex-wrap: wrap;
         #right-button {
@@ -77,6 +82,8 @@ body {
 }
 @media (max-width: 320px) {
     body{
+        max-height: 480px;
+        min-height: 480px;
         display: flex;
         flex-wrap: wrap;
         max-height: 480px;
