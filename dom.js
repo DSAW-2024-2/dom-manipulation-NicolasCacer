@@ -8,17 +8,33 @@ const images = [
   'assets/image_3.jpeg'
 ];
 let displayImage = 0;
-
-rightButton.addEventListener('click', event => {
-  if (displayImage < images.length-1){
-    displayImage++;
-    portrait.src = images[displayImage];
-  } 
-});
+UpdateButtons()
 
 leftButton.addEventListener('click', event => {
   if (displayImage > 0){
     displayImage--
     portrait.src = images[displayImage]
+    UpdateButtons()
   }
 });
+
+rightButton.addEventListener('click', event => {
+  if (displayImage < images.length-1){
+    displayImage++;
+    portrait.src = images[displayImage]
+    UpdateButtons()
+  }
+});
+
+function UpdateButtons(){
+  if (displayImage === 0){
+    leftButton.style.visibility = 'hidden';  
+  }
+  else if (displayImage === images.length-1){
+    rightButton.style.visibility = 'hidden';  
+  }
+  else {
+    leftButton.style.visibility = 'visible';
+    rightButton.style.visibility = 'visible';  
+  }
+}
