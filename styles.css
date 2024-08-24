@@ -1,7 +1,7 @@
 body {
     max-width: 2560px;
-    max-height: 1031px;
-    min-height: 768px;
+    max-height: 1024px;
+    min-height: 200px;
     margin: 0px;
     padding: 0px;
     height: 100vh;
@@ -10,15 +10,26 @@ body {
     flex-direction: row;
     background-color: black;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
+    .container {
+        align-content: center;
+        background-color: none;
+        min-width: 85%;
+        max-width: 85%;
+        min-height: 50%;
+        max-height: 90%;
+        overflow: auto;
+        background-image: 'assets/image_1.jpg';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
     #portrait {
-        height: 90%;
-        width: 70%;
-        border-radius: 1%;
-        border: white solid 3px;
-        overflow: hidden;
+        min-width: 100%;
         animation: load-content 2s;
+
     }
     .button {
         color: darkgray ;
@@ -42,11 +53,12 @@ body {
 
 @media (max-width:1024px) {
     body {
-        max-height: 720px;
-        min-height: 768px;
-        #portrait {
-            height: 75%;
-            width: 80%;
+        width: 100%;
+        max-height: 768px;
+        min-height: 480px;
+        .container {
+            min-height: 300px;
+            max-height: 300px;
         }
         .button{
             height: 14%;
@@ -56,18 +68,22 @@ body {
 
 @media (max-width: 768px) {
     body{
-        max-height: 1024px;
-        min-height: 1000px;
+        max-height: 768px;
+        min-height: 768px;
         display: flex;
         flex-wrap: wrap;
         #right-button {
             order:3;
         }
+        .container {
+            min-width: 750px;
+            max-width: 750px;
+        }
         #left-button {
             order:2;
         }
         .button{
-            width: 20%;
+            width: 15%;
             height: 15%;
             font-size: 200%;
             border-radius: 50%;
@@ -82,19 +98,27 @@ body {
 }
 @media (max-width: 320px) {
     body{
-        max-height: 480px;
-        min-height: 480px;
+        font-size: 50%;
+        max-height: 300px;
+        min-height: 300px;
         display: flex;
         flex-wrap: wrap;
-        max-height: 480px;
+        max-height: 300px;
         #right-button {
             order:3;
+        }
+        .container {
+            min-width: 310px;
+            max-width: 310px;
+            max-height: 480px;
+            min-height: 300px;
+            
         }
         #left-button {
             order:2;
         }
         .button{
-            width: 30%;
+            width: 20%;
             height: 20%;
             font-size: 200%;
             border-radius: 50%;
