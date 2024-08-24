@@ -8,51 +8,95 @@ body {
     background-color: black;
     align-items: center;
     justify-content: space-evenly;
+
+    #portrait {
+        height: 90%;
+        width: 70%;
+        border-radius: 1%;
+        border: white solid 3px;
+        overflow: hidden;
+        animation: load-content 2s;
+    }
+    .button {
+        color: darkgray ;
+        font-size: 300% ;
+        height: 15%;
+        width: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.4;
+        background-color: white;
+        animation: load-content 2s;
+    }
 }
 
-#portrait {
-    height: 90%;
-    width: 70%;
-    border-radius: 1%;
-    border: white solid 3px;
-    overflow: hidden;
-    animation: load-content 2s;
-}
-.button {
-    color: darkgray ;
-    font-size: 300% ;
-    height: 15%;
-    width: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.4;
-    background-color: white;
-    animation: load-content 2s;
-}
+
 @keyframes load-content {
     from{opacity: 0}
     to{opacity: 1}
 }
 
 @media (max-width:1024px) {
-    #portrait {
-        height: 75%;
-        width: 80%;
-    }
-    .button{
-        height: 14%;
+    body {
+        max-height: 720px;
+        #portrait {
+            height: 75%;
+            width: 80%;
+        }
+        .button{
+            height: 14%;
+        }
     }
 }
 
 @media (max-width: 768px) {
-    body {
-        background-color: aqua;
+    body{
+        max-height: 1024px;
+        display: flex;
+        flex-wrap: wrap;
+        #right-button {
+            order:3;
+        }
+        #left-button {
+            order:2;
+        }
+        .button{
+            width: 20%;
+            height: 15%;
+            font-size: 200%;
+            border-radius: 50%;
+            
+        }
+        #portrait {
+            height: 50%;
+            width: 90%;
+            order:1;
+        }
     }
 }
 @media (max-width: 320px) {
     body{
-        background-color: red;
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 480px;
+        #right-button {
+            order:3;
+        }
+        #left-button {
+            order:2;
+        }
+        .button{
+            width: 30%;
+            height: 20%;
+            font-size: 200%;
+            border-radius: 50%;
+            
+        }
+        #portrait {
+            height: 50%;
+            order:1;
+        }
     }
 }
     
