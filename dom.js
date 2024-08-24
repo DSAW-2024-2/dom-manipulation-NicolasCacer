@@ -18,14 +18,6 @@ leftButton.addEventListener('click', event => {
   }
 });
 
-leftButton.addEventListener('mouseover',event =>{
-  leftButton.style.opacity = 0.3;
-});
-
-leftButton.addEventListener('mouseout',event =>{
-  leftButton.style.opacity = 0.7;
-});
-
 rightButton.addEventListener('click', event => {
   if (displayImage < images.length-1){
     displayImage++;
@@ -34,12 +26,20 @@ rightButton.addEventListener('click', event => {
   }
 });
 
+leftButton.addEventListener('mouseover',event =>{
+  leftButton.style.opacity = 0.3;
+});
+
+leftButton.addEventListener('mouseout',event =>{
+  leftButton.style.opacity = 1;
+});
+
 rightButton.addEventListener('mouseover',event =>{
   rightButton.style.opacity = 0.3;
 });
 
 rightButton.addEventListener('mouseout',event =>{
-  rightButton.style.opacity = 0.7;
+  rightButton.style.opacity = 1;
 });
 
 function UpdateButtons(){
